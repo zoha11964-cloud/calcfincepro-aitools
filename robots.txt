@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://compress.calcfincepro.com/sitemap.xml
+Sitemap: https://aitools.calcfincepro.com/sitemap.xml
