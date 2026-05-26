@@ -7,7 +7,6 @@
     <meta name="description" content="Discover the best AI tools for writing, art, video, design and productivity. All popular AI applications in one place for worldwide users.">
     <meta name="keywords" content="AI tools, best AI tools, AI writing, AI art generator, AI video maker, Canva alternative, AI productivity tools, online AI software">
     <meta name="robots" content="index, follow">
-    <!-- 修正为当前正确域名 -->
     <link rel="canonical" href="https://aitools.calcfincepro.com/">
 
     <!-- GA4 统计代码 -->
@@ -33,6 +32,7 @@
             --tag-text: #8cb4f0;
             --header-border: #333;
             --hover-bg: #2a3444;
+            --primary: #8cb4f0;
         }
 
         .light-mode {
@@ -44,6 +44,7 @@
             --tag-text: #2c5282;
             --header-border: #eee;
             --hover-bg: #f0f7ff;
+            --primary: #2c5282;
         }
 
         * {
@@ -67,8 +68,14 @@
             padding: 0 15px;
         }
 
+        /* 1. 隐藏左右侧边广告栏 */
         .sidebar-ad {
-            display: block;
+            display: none !important;
+        }
+
+        /* 2. 隐藏所有内容中的广告占位 */
+        .ad-in-content {
+            display: none !important;
         }
 
         .main-content {
@@ -126,8 +133,68 @@
             margin: 10px auto 0;
         }
 
-        .ad-in-content {
-            display: block;
+        /* 统一 Smart Tools 样式（和压缩页完全一致） */
+        .cross-tools-bar {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border: 1px solid var(--border-color);
+            padding: 10px 12px;
+            margin: 0 auto 20px;
+            max-width: 100%;
+        }
+        .tools-title {
+            font-size: 14px;
+            color: var(--primary);
+            background-color: rgba(140, 180, 240, 0.1);
+            padding: 4px 0;
+            margin-bottom: 8px;
+            text-align: center;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            border-radius: 4px;
+        }
+        .tools-title i {
+            color: var(--primary);
+            font-size: 13px;
+        }
+        .cross-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+        }
+        .cross-tool-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            padding: 5px 4px;
+            background-color: rgba(140, 180, 240, 0.08);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 12px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        .cross-tool-card:hover {
+            background-color: rgba(140, 180, 240, 0.2);
+            color: var(--primary);
+            transform: translateY(-1px);
+        }
+        .cross-tool-icon {
+            font-size: 15px;
+            color: var(--primary);
+        }
+        /* 移动端自适应 */
+        @media (max-width: 768px) {
+            .cross-tools-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
         }
 
         .tool-category {
@@ -288,6 +355,27 @@
                 <p class="desc">One-stop platform for AI writing, art, video, design and productivity tools. Handpicked popular AI software for global users.</p>
             </header>
 
+            <!-- 全站统一 Smart Tools 模块 -->
+            <section class="cross-tools-bar">
+                <div class="tools-title">
+                    <i class="fa fa-wrench"></i>
+                    Smart Tools
+                </div>
+                <div class="cross-tools-grid">
+                    <a href="https://calcfincepro.com" class="cross-tool-card">
+                        <i class="fa fa-line-chart cross-tool-icon"></i>
+                        <span>Finance Calculator</span>
+                    </a>
+                    <a href="https://compress.calcfincepro.com" class="cross-tool-card">
+                        <i class="fa fa-compress cross-tool-icon"></i>
+                        <span>Image Compressor</span>
+                    </a>
+                    <div class="cross-tool-card"></div>
+                    <div class="cross-tool-card"></div>
+                    <div class="cross-tool-card"></div>
+                </div>
+            </section>
+
             <div class="ad-in-content">
                 <p>Google Ads Top (In Content)</p>
             </div>
@@ -316,11 +404,12 @@
                 </div>
             </div>
 
+            <!-- 已修正排序：标准2*2布局，消除空白错位 -->
             <div class="tool-category">
                 <h2 class="category-title">AI Video & Audio Tools</h2>
                 <div class="tool-list">
                     <div class="tool-item"><a href="https://runwayml.com" target="_blank">Runway ML</a><p>AI Video Editing</p></div>
-                    <div class="tool-item"><a href="https://pika.art" target="_blank">Pika Labs</p><p>AI Video Generation</p></div>
+                    <div class="tool-item"><a href="https://pika.art" target="_blank">Pika Labs</a><p>AI Video Generation</p></div>
                     <div class="tool-item"><a href="https://elevenlabs.io" target="_blank">ElevenLabs</a><p>AI Voice & TTS</p></div>
                     <div class="tool-item"><a href="https://descript.com" target="_blank">Descript</a><p>Audio & Video Editor</p></div>
                 </div>
@@ -336,7 +425,7 @@
                     <div class="tool-item"><a href="https://www.notion.so" target="_blank">Notion AI</a><p>Note & Document AI</p></div>
                     <div class="tool-item"><a href="https://www.deepl.com" target="_blank">DeepL</a><p>Professional Translation</p></div>
                     <div class="tool-item"><a href="https://www.slidesai.io" target="_blank">Slides AI</a><p>Auto PPT Maker</p></div>
-                    <div class="tool-item"><a href="https://www.grammarly.com" target="_blank">Grammarly</a><p>Grammar & Writing Check</p></div>
+                    <div class="tool-item"><a href="https://grammarly.com" target="_blank">Grammarly</a><p>Grammar & Writing Check</p></div>
                 </div>
             </div>
 
